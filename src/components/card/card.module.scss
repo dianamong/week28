@@ -1,0 +1,68 @@
+$mainColor: #ffffff;
+$secondColor: #797575;
+$fontSize: 22px;
+
+@mixin header {
+  border-bottom: 2px solid #ffffff;
+  padding: 1rem;
+  color: $mainColor;
+}
+
+.card {
+  width: 300px;
+  margin: 0.25rem;
+  font-size: $fontSize;
+  font-family: Verdana, Tahoma, sans-serif;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.card__header {
+  @include header;
+}
+
+.card__price {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  color: $mainColor;
+}
+
+.card__textUp {
+  align-self: flex-start;
+  font-size: 14px;
+}
+
+.card__textDown {
+  align-self: flex-end;
+  font-size: 14px;
+}
+
+.card__value {
+  font-size: 40px;
+  font-weight: 500;
+  margin: 0 0.5rem;
+}
+
+.card__speed {
+  background-color: #e4e2e2;
+  padding: 1rem;
+  color: $secondColor;
+  font-size: 16px;
+}
+
+.card__footer {
+  background-color: #dfdcdc;
+  padding: 1rem 0.3rem;
+  color: $secondColor;
+  font-size: 16px;
+}
+
+.selected {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.selected .card__header {
+  padding: 1.4rem;
+}
